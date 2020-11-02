@@ -38,7 +38,7 @@ For a changes in our database, we can use Netlify's build hooks to post a new ch
 i) Go to Netlify's build hooks (under `Settings` > `Build & deploy` > `Continuous Deployment` > `Build hooks`)
 ii) Type in Build hook name (e.g. Rebuild from Sanity) & leave Branch to build under `master`, then save it. Copy the URL given.
 iiI) Go to sanity directory and use the terminal
-iv) Type `sanity hook create` (`netlify deploy` can be used as Hook name) & paste the Hook URL
+iv) Type `sanity hook create` (`netlify deploy` can be used as Hook name), apply to `production` & paste the Hook URL
 v) It will automatically triggered everytime when you make changes (publish it) on Sanity Studio
 
 Extra:
