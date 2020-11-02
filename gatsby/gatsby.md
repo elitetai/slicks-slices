@@ -142,3 +142,15 @@ vi) Gatsby's GraphyQL style of query writting will not be the same as Sanity's G
 
   - Deployment:
     Type `npm run build` to run Gatsby build and able to use ES module. It will generate a public folder with all of the html pages.
+    Netlify:
+    ~ At `basic build settings`:
+    Build command: `npm run build`
+    Publish directory: `gatsby/public`
+
+    ~Under `Settings` > `Build & deploy` > `Continuous Deployment` > edit setting:
+    Base directory: `gatsby`
+    Publish directory: `gatsby/public`
+    Then re-deploy it @ `site overview` > `Production deploys` > `Trigger deploy` > `Clear cache...`
+
+    ~Under `Settings` > `Build & deploy` > `Environment`: Copy & paste all of the env in there
+    ~For CORS issue due to direct sanity URL query, add the URL under origin without credential allowed
