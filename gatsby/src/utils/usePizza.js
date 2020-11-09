@@ -6,8 +6,6 @@ import formatMoney from './formatMoney';
 
 export default function usePizza({ pizzas, values }) {
   // 1. Create some state to hold our order
-  // Got rid of below line because we moved useState up to the Provided
-  //   const [order, setOrder] = useState([]);
   // Now we access both our state and our updater function (setOrder) via context
   const [order, setOrder] = useContext(OrderContext);
   const [error, setError] = useState();
@@ -54,6 +52,7 @@ export default function usePizza({ pizzas, values }) {
         body: JSON.stringify(body),
       }
     );
+    // Below text message is received from placeOrder function
     const text = JSON.parse(await res.text());
 
     // check if everything worked

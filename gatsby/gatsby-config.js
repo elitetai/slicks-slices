@@ -25,9 +25,9 @@ export default {
         projectId: 'r8d1pior',
         dataset: 'production',
         watchMode: true, // when in development mode and you make a change to your sanity CMS, it will automatically be updated inside of your Gatsby (real time editing)
-        token: process.env.SANITY_TOKEN, // go to Settings > API > Tokens (read at this moment)
+        token: process.env.SANITY_TOKEN, // go to Settings > API > Tokens (Pick `Read` as the rights)
         // Notes: Add CORS Origins @ http://localhost:* and allow credentials for direct connection to Sanity's GraphQL
-        // remember to deploy graphQL API in sanity!
+        // remember to deploy GraphQL API in sanity!
       },
     },
   ],

@@ -17,7 +17,7 @@ export default function PizzasPage({ data, pageContext }) {
             : `All Pizzas`
         }
       />
-      {/* pageContext gotten from context @ line 54 of 'gatsby-node.js' */}
+      {/* pageContext gotten from context @ line 55 of 'gatsby-node.js' */}
       <ToppingFilter activeTopping={pageContext.topping} />
       <PizzaList pizzas={pizzas} />
     </>
@@ -32,7 +32,7 @@ export const query = graphql`
     pizzas: allSanityPizza(
       filter: { toppings: { elemMatch: { name: { regex: $toppingRegex } } } }
     ) {
-      # 2nd way to pass topping data from 'gatsby-node.js': is easier / simpler
+      # 2nd way to pass topping data from 'gatsby-node.js': easier / simpler
       # query($topping: [String]) {
       # pizzas: allSanityPizza(
       #   filter: { toppings: { elemMatch: { name: { in: $topping } } } }
@@ -49,9 +49,10 @@ export const query = graphql`
         }
         image {
           asset {
-            # fixed(width: 200, height: 200) {
-            #   ...GatsbySanityImageFluid
-            # }
+            # can use fixed as well
+            fixed(width: 200, height: 200) {
+              ...GatsbySanityImageFixed
+            }
             fluid(maxWidth: 400) {
               # Fragment comes with sanity plugin we used
               ...GatsbySanityImageFluid

@@ -31,6 +31,7 @@ const ToppingsStyles = styled.div`
 function countPizzasInToppings(pizzas) {
   // flat() will take multiple of arrays and flatten it into a array
   // reduce((2 args- accumulator, currentValue), {empty object})
+  // check out `Counting instances of values in an object` @ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
   const counts = pizzas
     .map((pizza) => pizza.toppings)
     .flat()

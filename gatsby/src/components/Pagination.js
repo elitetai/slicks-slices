@@ -11,6 +11,7 @@ const PaginationStyles = styled.div`
   margin: 2rem 0;
   border-radius: 5px;
   text-align: center;
+  /* Each flex item (&) and direct descendants (> *) */
   & > * {
     padding: 1rem;
     flex: 1;
@@ -55,9 +56,9 @@ export default function Pagination({
       >
         ← <span className="word">Prev</span>
       </Link>
-      {Array.from({ length: totalPages }).map((_, i) => (
+      {Array.from({ length: totalPages }, (_, i) => (
         <Link
-          className={currentPage === 1 && i === 0 ? 'current' : ''}
+          className={currentPage === 1 && i === 0 ? 'current' : ''} // so that page 1 will always be in red even if `SLICEMASTERS` @ Nav is clicked
           to={`${base}/${i > 0 ? i + 1 : ''}`}
           key={`page${i}`}
         >

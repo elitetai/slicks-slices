@@ -13,6 +13,7 @@ function generateOrderEmail({ order, total }) {
     ${item.size} ${item.name} - ${item.price}
     </li>`
       )
+      // Because this is an array map(), hence, the result will show commas as well. To eliminate it, use join()
       .join('')}
     </ul>
     <p>Your total is <strong>${total}</strong> due at pickup</p>
@@ -35,6 +36,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// custom function for waiting time
 function wait(ms = 0) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, ms);

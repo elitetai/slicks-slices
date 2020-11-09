@@ -20,7 +20,7 @@ async function turnPizzasIntoPages({ graphql, actions }) {
   `);
   // 3. Loop over each pizza and create a page for that pizza
   data.pizzas.nodes.forEach((pizza) => {
-    // createPage() is the method, not the function below
+    // createPage() is the method, not the function `createPages(params)` below
     actions.createPage({
       // What is the URL for this new page??
       path: `pizza/${pizza.slug.current}`,

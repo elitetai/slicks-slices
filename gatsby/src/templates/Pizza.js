@@ -14,7 +14,7 @@ const PizzaGrid = styled.div`
 export default function SinglePizzaPage({ data: { pizza } }) {
   return (
     <>
-      {/* ? under image is called nested chaining, where it will check one by one from left to right to see if it exists or not */}
+      {/* The '?' under image is called nested chaining, where it will check one by one from left to right to see if it exists or not */}
       <SEO title={pizza.name} image={pizza.image?.asset?.fluid?.src} />
       <PizzaGrid>
         <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />

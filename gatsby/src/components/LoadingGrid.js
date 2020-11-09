@@ -4,6 +4,7 @@ import { ItemsGrid, ItemStyles } from '../styles/Grids';
 export default function LoadingGrid({ count }) {
   return (
     <ItemsGrid>
+      {/* Array.from() - check out `Using arrow functions and Array.from()` @ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from */}
       {/* Second argument is also a map() function */}
       {Array.from({ length: count }, (_, i) => (
         <ItemStyles key={`loader-${i}`}>

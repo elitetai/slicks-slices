@@ -14,8 +14,8 @@ export default function ItemGrid({ items }) {
             height="400"
             // the styling method for src is from sanity itself
             src={`${item.image.asset.url}?w=500&h=400&fit=crop`}
-            alt="{item.name}"
-            // below style is to load a lqip first before the actual image (looks like a pixalated photo of the original image)
+            alt={item.name}
+            // below style is to load a lqip first (after loading animation) before the actual image (looks like a pixalated photo of the original image)
             style={{
               background: `url(${item.image.asset.metadata.lqip})`,
               backgroundSize: 'cover',
