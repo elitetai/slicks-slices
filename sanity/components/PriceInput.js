@@ -30,3 +30,8 @@ export default function PriceInput({ type, value, onChange, inputComponent }) {
     </div>
   );
 }
+
+// Accessibility - exposing focus input for sanity to run
+PriceInput.focus = function () {
+  this._inputElement.focus();
+};
